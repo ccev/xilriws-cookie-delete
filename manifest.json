@@ -1,43 +1,49 @@
 {
 "update_url": "https://clients2.google.com/service/update2/crx",
 
-  "version": "0.1.4",
-  "manifest_version": 3,
-  "offline_enabled": true,
-  "name": "Cookie Auto Delete",
-  "host_permissions": ["*://*/*"],
-  "homepage_url": "https://mybrowseraddon.com/cookie-auto-delete.html",
-  "description": "Automatically delete cookies when a tab or the browser is closed!",
-  "commands": {
-    "_execute_action": {}
-  },
   "background": {
-    "service_worker": "background.js"
+    "scripts": [
+      "global_files/browserDetect.js",
+      "global_files/browser-polyfill.min.js",
+      "global_files/redux-webext.js",
+      "bundles/common-background-popup-setting.bundle.js",
+      "bundles/common-background.bundle.js",
+      "bundles/background.bundle.js"
+    ]
   },
-  "options_ui": {
-    "open_in_tab": true,
-    "page": "data/options/options.html"
-  },
-  "permissions": [
-    "storage", 
-    "cookies", 
-    "notifications", 
-    "contentSettings"
-  ],
-  "action": {
-    "default_title": "Cookie Auto Delete",
+  "description": "__MSG_extensionDescription__",
+  "homepage_url": "https://github.com/Cookie-AutoDelete/Cookie-AutoDelete",
+  "author": "CAD Team",
+  "default_locale": "en",
+  "browser_action": {
+    "browser_style": false,
     "default_icon": {
-      "16": "data/icons/16.png",
-      "32": "data/icons/32.png",
-      "48": "data/icons/48.png",
-      "64": "data/icons/64.png"
-    }
+      "48": "icons/icon_48.png"
+    },
+    "default_title": "Cookie AutoDelete",
+    "default_popup": "popup/popup.html"
   },
   "icons": {
-    "16": "data/icons/16.png",
-    "32": "data/icons/32.png",
-    "48": "data/icons/48.png",
-    "64": "data/icons/64.png",
-    "128": "data/icons/128.png"
-  }
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "minimum_chrome_version": "74",
+  "options_ui": {
+    "page": "settings/settings.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "activeTab",
+    "alarms",
+    "browsingData",
+    "contextMenus",
+    "cookies",
+    "notifications",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+  "manifest_version": 2,
+  "name": "__MSG_extensionName__",
+  "version": "3.8.2"
 }
