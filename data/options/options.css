@@ -1,0 +1,74 @@
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 13px;
+  max-width: 1200px;
+  font-family: arial, sans-serif;
+}
+
+.container {
+  padding: 0;
+}
+
+.container table {
+  border: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 13px;
+  border-spacing: 10px;
+  font-family: arial, sans-serif;
+}
+
+.container input[type="checkbox"] {
+  margin: 0;
+  float: right;
+  vertical-align: middle;
+}
+
+.container textarea {
+  margin: 0;
+  color: #333;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  height: 250px;
+  font-size: 13px;
+  box-sizing: border-box;
+  font-family: monospace;
+  border: solid 1px rgba(0,0,0,0.25);
+}
+
+.container .title {
+  width: 128px;
+  padding: 10px;
+  min-width: 128px;
+  max-width: 128px;
+  font-weight: 600;
+}
+
+.container .comment {
+  padding: 0;
+  color: #555;
+  line-height: 18px;
+}
+
+.container .description {
+  padding: 0;
+  color: #333;
+}
+
+.container .separator div {
+  width: 100%;
+  height: 1px;
+  margin: 15px 0;
+  background-color: rgba(0,0,0,0.05);
+}
+
+.logo {
+  width: 100%;
+  height: 128px;
+  border-bottom: solid 1px rgba(0,0,0,0.1);
+  background: url('../icons/128.png') no-repeat center center;
+  background-size: 64px;
+}
